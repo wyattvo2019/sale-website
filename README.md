@@ -10,3 +10,6 @@ pip install --upgrade pip
 [] pip install -r requiments.txt
 django-admin startapp app
 # sale-website
+python -m pip install Django
+python manage.py migrate
+python manage.py runserver
