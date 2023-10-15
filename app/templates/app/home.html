@@ -49,98 +49,19 @@
 </div>
 {% endblock banner_slider %}
 {% block main_content %}
-<div class="row">
-
+<div class="row" style="width:100%">
+  {% for product in products %}
   <div class="col-lg-3">
     <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}">
     <div class="box-element product">
-      <h6><strong>Product</strong></h6>
+      <h6><strong>{{ product.name }}</strong></h6>
       <hr>
       <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
       <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
+      <h4 style="display: inline-block;"><strong>${{ product.price | floatformat:2}}</strong></h4>
     </div>
   </div>
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}">
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}" >
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}" >
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
-
-</div>
-<div class="row">
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}">
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}">
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}" >
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
-
-  <div class="col-lg-3">
-    <img class="thumbnail" src="{% static 'app/images/cow-ghee.png' %}" >
-    <div class="box-element product">
-      <h6><strong>Product</strong></h6>
-      <hr>
-      <button class="btn btn-outline-secondary add-btn"> Add to cart</button>
-      <a class="btn btn-outline-success" href="#">View</a>
-      <h4 style="display: inline-block;"><strong>200.000</strong></h4>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 <br />
