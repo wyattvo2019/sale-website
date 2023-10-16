@@ -24,3 +24,6 @@ python manage.py runserver
 # create database
 python manage.py makemigrations
 python manage.py migrate
+# install module supporting for upload image
+pip install pillow
+python -m pip install Pillow
