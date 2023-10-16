@@ -27,3 +27,5 @@ python manage.py migrate
 # install module supporting for upload image
 pip install pillow
 python -m pip install Pillow
+# export database from sqllite3
+python manage.py dumpdata > db-dump.json
